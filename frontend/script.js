@@ -40,14 +40,48 @@ function showConfirmationMessage(data) {
     const div = document.createElement("div")
 
     div.innerHTML = `
-        <h1>Congratulations, you are registered!</h1>
-        <p>ID: ${data.userId}</p>
-        <p>Name: ${data.fullName}</p>
-        <p>Address: ${data.address}</p>
-        <p>Status: ${data.status}</p>
-        <p>Fee: ${data.fee}</p>
+    <div class="jumbotron">
+        <h1 class="display-4">Congratulations, you're confirmed !</h1>
+    </div>
+    <form>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">ID</label>
+            <div class="col-sm-10">
+                <input type="text" readonly class="form-control-plaintext"  value="${data.userId}">
+            </div>
+        </div>
 
-        <button onclick="location.reload()">Register again</button>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Full Name</label>
+            <div class="col-sm-10">
+                <input type="text" readonly class="form-control-plaintext"  value="${data.fullName}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Address</label>
+            <div class="col-sm-10">
+                <input type="text" readonly class="form-control-plaintext"  value="${data.address}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Status</label>
+            <div class="col-sm-10">
+                <input type="text" readonly class="form-control-plaintext"  value="${data.status}">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Fee</label>
+            <div class="col-sm-10">
+                <input type="text" readonly class="form-control-plaintext"  value="${new Intl.NumberFormat("en-us", {
+        style: 'currency',
+        currency: 'USD',
+    }).format(data.fee)
+        }">
+            </div >
+        </div >
+    <button class="btn btn-warning" onclick="location.reload()">Go back!</button>
+    </form >
+
     `
 
     content.innerHTML = ''

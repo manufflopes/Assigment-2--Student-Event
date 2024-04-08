@@ -5,34 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <title>BVC Sport Club Event Registration</title>
 </head>
 
 <body>
-    <section id="content">
+    <section class="container" id="content">
+        <div class="jumbotron">
+            <h1 class="display-6">BVC Sport Club Event Registration</h1>
+            <p class="lead">Fill the form below to register to the Student Event</p>
+
+        </div>
         <form id="registrationForm" method="post">
-            <div>
+            <div class="form-group">
                 <label for="userId">ID</label>
-                <input name="userId" id="userId" type="text" required>
+                <input class="form-control" name="userId" id="userId" type="text" required>
             </div>
-            <div>
+            <div class="form-group">
                 <label for="fullName">Full Name</label>
-                <input name="fullName" id="fullName" type="text" required>
+                <input class="form-control" name="fullName" id="fullName" type="text" required>
             </div>
-            <div>
+            <div class="form-group">
                 <label for="address">Address</label>
-                <input name="address" id="address" type="text" required>
+                <input class="form-control" name="address" id="address" type="text" required>
             </div>
-            <div>
+            <div class="form-group">
                 <label for="status">Status</label>
-                <select name="status" id="status" required>
+                <select class="form-control" name="status" id="status" required>
                     <option value="" selected>Choose the status</option>
                     <option value="student">Student</option>
                     <option value="staff">Staff</option>
                     <option value="volunteer">Volunteer</option>
                 </select>
             </div>
-            <button type="submit">Register</button>
+            <button class="btn btn-primary" type="submit">Register</button>
         </form>
         <span class="error"></span>
     </section>
