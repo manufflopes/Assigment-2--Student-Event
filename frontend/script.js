@@ -1,5 +1,5 @@
 async function registerUser(data) {
-    const response = await fetch("http://localhost:3000/register", {
+    const response = await fetch("https://student-event-api.onrender.com/register", {
         method: "post",
         headers: {
             "Content-Type": "application/json",
