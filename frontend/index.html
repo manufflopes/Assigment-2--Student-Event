@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BVC Sport Club Event Registration</title>
+</head>
+
+<body>
+    <section id="content">
+        <form id="registrationForm" method="post">
+            <div>
+                <label for="userId">ID</label>
+                <input name="userId" id="userId" type="text" required>
+            </div>
+            <div>
+                <label for="fullName">Full Name</label>
+                <input name="fullName" id="fullName" type="text" required>
+            </div>
+            <div>
+                <label for="address">Address</label>
+                <input name="address" id="address" type="text" required>
+            </div>
+            <div>
+                <label for="status">Status</label>
+                <select name="status" id="status" required>
+                    <option value="" selected>Choose the status</option>
+                    <option value="student">Student</option>
+                    <option value="staff">Staff</option>
+                    <option value="volunteer">Volunteer</option>
+                </select>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+        <span class="error"></span>
+    </section>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
